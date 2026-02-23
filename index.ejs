@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>short-url</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+        }
+         .container{
+            display: flex;
+            justify-content: center;
+         }
+         h1{
+            color: rgb(210, 80, 156);
+         }
+         .data input{
+            height: 20px;
+            padding: 9px;
+            border-radius: 10px;
+         }
+         button{
+            width: 100px;
+            height: 35px;
+            border-radius: 5px;
+            box-shadow:5px solid  rgb(198, 32, 198);
+            background-color: darkviolet;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<div class="data">
+
+    <h1>Short-URL Priject</h1>
+    <form action="/short" method="post">
+        <label for="longUrl"> Enter Long-URL :- </label>
+        <input type="text" placeholder="enter long-url" required id="longUrl" name="longUrl"><br><br>
+        <button type="submit">Shorted</button>
+        
+    </form>
+    <% if(shortUrl) { %>
+        <p>Short-URL:- <a href="<%= shortUrl %>" />
+            <%= shortUrl %>
+        </p>
+        <% } %>
+    </div>
+</div>
+    
+</body>
+</html>
